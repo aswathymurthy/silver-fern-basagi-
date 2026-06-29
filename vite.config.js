@@ -9,13 +9,13 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] })
   ],
   build: {
-    outDir: '../silver-fern-backend/public',
+    outDir: 'dist',
     emptyOutDir: false,
   },
   server: {
     proxy: {
-      '/api': 'http://127.0.0.1:8000',
-      '/storage': 'http://127.0.0.1:8000'
+      '/api': 'http://localhost:8000',
+      '/storage': 'http://localhost:8000'
     }
   }
 })
